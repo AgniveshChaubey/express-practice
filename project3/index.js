@@ -32,7 +32,7 @@ const authenticatedUser = (username, password) => {
 const app = express();
 
 // 4. You will now create and use a session object with user-defined secret, as a middleware to intercept the requests and ensure that the session is valid before processing the request.
-app.use(session({ secret: "fingerprint" }, resave = true, saveUninitialized = true));
+app.use(session({ secret: "fingerprint" }, saveUninitialized = true));
 
 app.use(express.json);
 
